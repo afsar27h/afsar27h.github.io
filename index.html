@@ -1,10 +1,13 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Afsar Hossain | Personal Profile</title>
+    <title>Afsar Hossen | Personal Profile</title>
+    
+    <!-- Lightbox CSS for gallery -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css">
+    
     <style>
         body {
             font-family: 'Helvetica', sans-serif;
@@ -23,7 +26,7 @@
             margin-top: 30px;
             text-align: center;
         }
-        img {
+        img.profile {
             width: 150px;
             height: 150px;
             object-fit: cover;
@@ -46,27 +49,98 @@
         .links a:hover {
             text-decoration: underline;
         }
+        /* Gallery Styles */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            background: white;
+            transition: transform 0.3s;
+        }
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .caption {
+            padding: 10px;
+            font-weight: bold;
+            background: #ffffff;
+            font-size: 16px;
+        }
     </style>
 </head>
 <body>
+
     <div class="container">
-        <img src="IMG_20250228_164840.jpg" alt="Profile Picture">
-        <h1>Afsar Hossain</h1>
+        <img src="IMG_20250228_164840.jpg" alt="Profile Picture" class="profile">
+        <h1>Afsar Hossen</h1>
         <h2>Personal Profile</h2>
 
         <div class="section">
             <h3>About Me</h3>
-            <p>I am Afsar Hossain, a skilled welder and experienced worker. I have about 4 years of experience in various roles including snack shop management, shop handling, and catering services.</p>
+            <p>I am Afsar Hossen, recently trained in welding. I have completed welding practice and now looking to gain real-world experience. I have previously worked in snack shop management, shop handling, and catering services.</p>
         </div>
 
         <div class="section">
             <h3>Skills</h3>
             <ul style="list-style: none; padding: 0;">
-                <li>Welding</li>
-                <li>Management</li>
+                <li>Welding (Trained)</li>
+                <li>Shop Management</li>
                 <li>Catering Services</li>
                 <li>Client Handling</li>
             </ul>
+        </div>
+
+        <div class="section">
+            <h3>My Welding Work Samples</h3>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <a href="images/welding1.jpg" data-lightbox="welding-gallery" data-title="Welding Sample 1">
+                        <img src="images/welding1.jpg" alt="Welding 1">
+                    </a>
+                    <div class="caption">Welding Sample 1</div>
+                </div>
+                <div class="gallery-item">
+                    <a href="images/welding2.jpg" data-lightbox="welding-gallery" data-title="Welding Sample 2">
+                        <img src="images/welding2.jpg" alt="Welding 2">
+                    </a>
+                    <div class="caption">Welding Sample 2</div>
+                </div>
+                <div class="gallery-item">
+                    <a href="images/welding3.jpg" data-lightbox="welding-gallery" data-title="Welding Sample 3">
+                        <img src="images/welding3.jpg" alt="Welding 3">
+                    </a>
+                    <div class="caption">Welding Sample 3</div>
+                </div>
+                <div class="gallery-item">
+                    <a href="images/welding4.jpg" data-lightbox="welding-gallery" data-title="Welding Sample 4">
+                        <img src="images/welding4.jpg" alt="Welding 4">
+                    </a>
+                    <div class="caption">Welding Sample 4</div>
+                </div>
+                <div class="gallery-item">
+                    <a href="images/welding5.jpg" data-lightbox="welding-gallery" data-title="Welding Sample 5">
+                        <img src="images/welding5.jpg" alt="Welding 5">
+                    </a>
+                    <div class="caption">Welding Sample 5</div>
+                </div>
+                <div class="gallery-item">
+                    <a href="images/welding6.jpg" data-lightbox="welding-gallery" data-title="Welding Sample 6">
+                        <img src="images/welding6.jpg" alt="Welding 6">
+                    </a>
+                    <div class="caption">Welding Sample 6</div>
+                </div>
+            </div>
         </div>
 
         <div class="section">
@@ -78,6 +152,11 @@
                 <a href="https://t.me/+8801724944314" target="_blank">Telegram</a>
             </div>
         </div>
+
     </div>
+
+    <!-- Lightbox JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+
 </body>
 </html>
